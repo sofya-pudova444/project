@@ -16,8 +16,21 @@
 }
 
 .header_search{
-    width: 45%;
+    width: 39%;
     height: 80px;
     float: left;
 }
 
+.search_input {
+    background-color: #181818;
+    color: #FFFFFF;
+    border: 1px solid #444444;
+    border-radius: 5px;
+    width: 710px;
+    height: 52%;
+    top: 18px;
+    left: 458px;
+    position: absolute;
+    float: left;
+    box-sizing: border-box;
+}
