@@ -43,11 +43,84 @@
     color: #FFFFFF;
     border: 1px solid #444444;
     border-radius: 5px;
-    width: 710px;
+    width: 705px;
     height: 52%;
     top: 18px;
     left: 458px;
     position: absolute;
     float: left;
     box-sizing: border-box;
+}
+
+.menu {
+    float: left;
+    width: 38%;
+    height: 80px;
+}
+
+.top_menu {
+    list-style: none;
+}
+
+.top_menu li {
+	float: left;
+    margin-left: 99px;
+    margin-top: -8px;
+}
+
+.top_menu li a {
+    text-decoration: none;
+    
+}
+
+.top_menu li a p{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 18px;
+    text-transform: uppercase;
+    color: white
+}
+
+.footer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: #000000;
+  padding: 40px 0;
+  width: 100%;
+}
+
+.catalog {
+    width: 310px;
+    height: 750px;
+    background-color: #181818;
+    position: absolute;
+    left: 120px;
+    top: 106px;
+}
+
+
+.catalog_menu li a {
+    text-decoration: none;
+}
+
+.catalog_menu li a p {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 15px;
+    text-transform: uppercase;
+    color: white;
+    text-align: left;
+    margin-top: 25px;
+}
+
+.catalog_menu{
+    list-style-type: none;
+}
+
+.catalog_menu h1 {
+    font-size: 30px;
+    font-family: Arial, Helvetica, sans-serif;
+    color: white;
+    font-weight: bold;
+    text-align: left;
 }
