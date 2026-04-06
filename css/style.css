@@ -265,3 +265,43 @@
     gap: 75px;           
 }
 
+.block_reg{
+    height: 500px;
+    width: 700px;
+    background-color: black;
+    position: absolute;
+    left: 545px;
+    top: 282px;
+    border-radius: 10px;
+}
+
+input[name="email"],
+input[name="passw"],
+input[name="passw_pow"] {
+    width: 445px;
+    height: 54px;
+    margin-left: 130px;
+    border-radius: 8px;
+    margin-top: 45px;
+}
+
+input[name="email"]:hover,
+input[name="passw"]:hover,
+input[name="passw_pow"]:hover {
+    border-color: #ffffff;
+    box-shadow: 0 0 5px rgba(40, 167, 69, 0.5);
+}
+
+button[type="submit"] {
+    width: 445px;
+    height: 54px;
+    margin-left: 130px;
+    border-radius: 8px;
+    margin-top: 45px;
+}
+
+button[type="submit"]:hover{
+    border-color: #ffffff;
+    box-shadow: 0 0 5px rgba(40, 167, 69, 0.5);
+
+}
