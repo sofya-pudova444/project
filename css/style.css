@@ -16,7 +16,7 @@
 }
 
 .log {
-    width: 23%;
+    width: 35%;
     height: 80px;
     background-color: #181818;
     float: left;
@@ -54,7 +54,7 @@
 
 .menu {
     float: left;
-    width: 38%;
+    width: 60%;
     height: 80px;
 }
 
@@ -81,26 +81,83 @@
 }
 
 .footer {
-  position: fixed;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  background-color: #000000;
-  padding: 40px 0;
-  width: 100%;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 175px;
+    background-color: #1b1b1b;
+    color: white;
+    padding: 20px 0;
+    box-sizing: border-box; /* Чтобы padding не увеличивал высоту */
 }
+
+.block_1{
+    width: 40%;
+    float: left;
+    height: 150px;
+}
+
+.block_2{
+    width: 60%;
+    float: left;
+    height: 150px;
+}
+
+.block_1 h1{
+    position: absolute;
+    font-size: 17px;
+    left: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.block_1 p {
+    /* margin-top: -26px; */
+    /* top: 10px; */
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 15px;
+    padding-top: 17px;
+    padding-left: 20px;
+    line-height: 13px; /*Интервал между текстом*/
+}
+
+.block_2 h1{
+    font-size: 17px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.info {
+    list-style: none;
+    margin-left: -40px;
+}
+
+.info li a {
+    text-decoration: none;
+}
+
+.info li a p{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 15px;
+    color: white;
+}
+
 
 .catalog {
     width: 310px;
-    height: 750px;
+    height: 617px;
     background-color: #181818;
     position: absolute;
-    left: 120px;
+    left: 35px;
     top: 106px;
 }
 
 
-
+.catalog_menu li {
+    margin: 0;                 
+    padding: 10px 15px;      
+    border-bottom: 1px solid rgba(255,255,255,0.2); 
+    cursor: pointer; /* Курсор руки */
+}
 
 .catalog_menu li a {
     text-decoration: none;
@@ -115,17 +172,56 @@
     margin-top: 25px;
 }
 
-.catalog_menu{
-    list-style-type: none;
+.catalog_menu {
+    list-style-type: none; 
+    padding-left: 0;       
+    color: white;         
+    width: 100%;           
+    float: left;           
+    font-family: Arial, sans-serif; 
 }
 
-.catalog_menu h1 {
+.catalog h1 {
     font-size: 30px;
     font-family: Arial, Helvetica, sans-serif;
     color: white;
     font-weight: bold;
-    text-align: left;
+    text-align: center;
 }
+
+/*---CARDS---*/
+.cards {
+    position: absolute;
+    width: 79%; 
+    left: 22%; 
+    top: 100px; 
+    padding: 20px;
+    box-sizing: border-box;
+    margin-top: -20px;
+    display: flex; 
+    flex-wrap: wrap; /* Разрешаем перенос на новую строку */
+    gap: 18px; /* Задаем отступы между карточками */
+}
+
+.card {
+    width: 200px;
+    height: 295px;
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 4px 16px rgba(0,0,0,0.1);
+    padding: 15px;
+    box-sizing: border-box;
+}
+
+.card img {
+    left: auto;
+    top: auto;
+    width: 100%;
+    height: auto;
+    display: block; 
+    border-radius: 10px;
+}
+
 
 .bluz {
     width: 100%;
@@ -265,13 +361,21 @@
     gap: 75px;           
 }
 
+.nazv{
+    height: 100px;
+    width: 100px;
+    position: absolute;
+    left: 800px;
+    top: 84px;
+}
+
 .block_reg{
     height: 500px;
     width: 700px;
     background-color: black;
     position: absolute;
     left: 545px;
-    top: 282px;
+    top: 187px;
     border-radius: 10px;
 }
 
@@ -304,4 +408,60 @@ button[type="submit"]:hover{
     border-color: #ffffff;
     box-shadow: 0 0 5px rgba(40, 167, 69, 0.5);
 
+}
+
+.cont_name{
+    position: absolute;
+    top: 64px;
+    float: left;
+}
+
+.cont_name h1{
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.contact {
+    width: 494px;
+    height: 440px;
+    background-color: white;
+    position: absolute;
+    border-radius: 14px;
+    top: 143px;
+    float: left;
+    border-style:solid ;
+    border-color: #000000;
+    
+}
+
+.contact p{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 18px;
+    /* position: absolute; */
+    /* left: 20px; */
+    /* margin-top: 5px; */
+    margin: 10px;
+
+}
+
+.contact h1{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 20px;
+    margin: 10px; 
+}
+
+
+.hydi {
+    width: 100%;
+    height: 750px;
+    background-color: #181818;
+    position: absolute;
+    left: 120px;
+    top: 106px;
+}
+
+.hydi_cont {
+    display: flex;           /* Включаем Flexbox */
+    flex-wrap: wrap;         /* Разрешаем перенос на новую строку */
+    justify-content: center; /* Центрирование карточек */
+    gap: 75px;              /* Расстояние между карточками */
 }

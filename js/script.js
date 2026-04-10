@@ -1,7 +1,6 @@
-// Функция отправки данных на сервер
-// Принимаем объект с данными напрямую
-async function fetchData(email,passw,passw_pow) {
-    let url = `http://localhost/myserver/?email=${email}&passw=${passw}&passw_pow=${passw_pow}`
+
+async function fetchData(d) {
+    let url = `http://localhost/myserver/post` // адрес куда отправляется запрос
     
     const response = await fetch(url, {
         method: 'POST',
@@ -9,21 +8,14 @@ async function fetchData(email,passw,passw_pow) {
             'Accept': 'application/json',
             'Content-Type': 'application/x-www-form-urlencoded'
         },
-        body: new URLSearchParams(email, passw, passw_pow).toString()
+        body: new URLSearchParams(d).toString()
     });
     
-    // Проверка ответа от сервера (опционально)
-    if (!response.ok) {
-        throw new Error(`Ошибка сети: ${response.status}`);
-    }
-    
-    const result = await response.json();
-    console.log('Ответ сервера:', result);
 }
 
-
+//Функция для формы заявки.POST
 function reg_form() {
-    const btn_reg = document.querySelector('#btn_reg');
+    const btn_reg = document.querySelector('#btn_reg'); //достаем id кнопки
     
     btn_reg.addEventListener('click', event => {
         // Получаем значения из полей ввода
@@ -57,7 +49,7 @@ function reg_form() {
             return;
         }
         
-        // Если все проверки пройдены, создаем объект с данными и отправляем
+        // Если все проверки пройдены, то отправляем данные
         alert('Успешно');
         const d = { email, passw, passw_pow };
         
@@ -69,4 +61,26 @@ function reg_form() {
 
 document.addEventListener('DOMContentLoaded', function () {
     reg_form();
+});
+
+// Функция для вывода каталога на страницу
+async function see_catalog() {
+    const catalog_menu = document.querySelector('.catalog_menu');
+
+    let url = `http://localhost/myserver/get`;
+    
+    let response = await fetch(url);  // Выполняем GET-запрос к серверу
+    let data = await response.json();  // Преобразуем ответ сервера из JSON-формата в JavaScript-объект
+
+     // Перебираем каждый элемент массива data
+    for (let item of data) {
+    const newLi = document.createElement('li'); // Создание li для вывода каталога
+    newLi.textContent = item.name_catalog // добавление элементов
+    catalog_menu.appendChild(newLi); // Добавляем созданный <li> внутрь <ul>
+}
+}
+
+// Вызов при загрузке страницы
+document.addEventListener('DOMContentLoaded', function () {
+    see_catalog();
 });
